@@ -1,0 +1,117 @@
+{
+  "ETH": {
+      "confirmed": {
+          "amount": "300000000000000000",
+          "currency": {
+              "code": "ETH",
+              "currencyType": "crypto",
+              "divisibility": 18,
+              "name": "Ethereum",
+              "testnetCode": ""
+          }
+      },
+      "height": 5081146,
+      "unconfirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "ETH",
+              "currencyType": "crypto",
+              "divisibility": 18,
+              "name": "Ethereum",
+              "testnetCode": ""
+          }
+      }
+  },
+  "TBCH": {
+      "confirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "BCH",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin Cash",
+              "testnetCode": "TBCH"
+          }
+      },
+      "height": 1327923,
+      "unconfirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "BCH",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin Cash",
+              "testnetCode": "TBCH"
+          }
+      }
+  },
+  "TBTC": {
+      "confirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "BTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin",
+              "testnetCode": "TBTC"
+          }
+      },
+      "height": 1578244,
+      "unconfirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "BTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin",
+              "testnetCode": "TBTC"
+          }
+      }
+  },
+  "TLTC": {
+      "confirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "LTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Litecoin",
+              "testnetCode": "TLTC"
+          }
+      },
+      "height": 1196981,
+      "unconfirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "LTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Litecoin",
+              "testnetCode": "TLTC"
+          }
+      }
+  },
+  "TZEC": {
+      "confirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "ZEC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Zcash",
+              "testnetCode": "TZEC"
+          }
+      },
+      "height": 596830,
+      "unconfirmed": {
+          "amount": "0",
+          "currency": {
+              "code": "ZEC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Zcash",
+              "testnetCode": "TZEC"
+          }
+      }
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "value": "any",
+    "label": "Any",
+    "checked": false,
+    "default": true,
+    "exclusive": true
+  },
+  {
+    "value": "new",
+    "label": "New",
+    "checked": true,
+    "default": false
+  },
+  {
+    "value": ["used", "used_excellent", "used_good", "used_poor"],
+    "label": "Used",
+    "checked": true,
+    "default": false
+  },
+  {
+    "value": "refurbished",
+    "label": "Refurbished",
+    "checked": false,
+    "default": false
+  }
+]

@@ -1,0 +1,162 @@
+{
+  "ETH": {
+      "economic": {
+          "amount": "0",
+          "currency": {
+              "code": "ETH",
+              "currencyType": "crypto",
+              "divisibility": 18,
+              "name": "Ethereum",
+              "testnetCode": ""
+          }
+      },
+      "normal": {
+          "amount": "0",
+          "currency": {
+              "code": "ETH",
+              "currencyType": "crypto",
+              "divisibility": 18,
+              "name": "Ethereum",
+              "testnetCode": ""
+          }
+      },
+      "priority": {
+          "amount": "0",
+          "currency": {
+              "code": "ETH",
+              "currencyType": "crypto",
+              "divisibility": 18,
+              "name": "Ethereum",
+              "testnetCode": ""
+          }
+      }
+  },
+  "TBCH": {
+      "economic": {
+          "amount": "1",
+          "currency": {
+              "code": "BCH",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin Cash",
+              "testnetCode": "TBCH"
+          }
+      },
+      "normal": {
+          "amount": "14",
+          "currency": {
+              "code": "BCH",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin Cash",
+              "testnetCode": "TBCH"
+          }
+      },
+      "priority": {
+          "amount": "74",
+          "currency": {
+              "code": "BCH",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin Cash",
+              "testnetCode": "TBCH"
+          }
+      }
+  },
+  "TBTC": {
+      "economic": {
+          "amount": "12",
+          "currency": {
+              "code": "BTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin",
+              "testnetCode": "TBTC"
+          }
+      },
+      "normal": {
+          "amount": "52",
+          "currency": {
+              "code": "BTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin",
+              "testnetCode": "TBTC"
+          }
+      },
+      "priority": {
+          "amount": "52",
+          "currency": {
+              "code": "BTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Bitcoin",
+              "testnetCode": "TBTC"
+          }
+      }
+  },
+  "TLTC": {
+      "economic": {
+          "amount": "6",
+          "currency": {
+              "code": "LTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Litecoin",
+              "testnetCode": "TLTC"
+          }
+      },
+      "normal": {
+          "amount": "64",
+          "currency": {
+              "code": "LTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Litecoin",
+              "testnetCode": "TLTC"
+          }
+      },
+      "priority": {
+          "amount": "200",
+          "currency": {
+              "code": "LTC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Litecoin",
+              "testnetCode": "TLTC"
+          }
+      }
+  },
+  "TZEC": {
+      "economic": {
+          "amount": "10",
+          "currency": {
+              "code": "ZEC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Zcash",
+              "testnetCode": "TZEC"
+          }
+      },
+      "normal": {
+          "amount": "100",
+          "currency": {
+              "code": "ZEC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Zcash",
+              "testnetCode": "TZEC"
+          }
+      },
+      "priority": {
+          "amount": "200",
+          "currency": {
+              "code": "ZEC",
+              "currencyType": "crypto",
+              "divisibility": 8,
+              "name": "Zcash",
+              "testnetCode": "TZEC"
+          }
+      }
+  }
+}

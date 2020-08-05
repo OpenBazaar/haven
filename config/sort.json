@@ -1,0 +1,26 @@
+[
+  {
+    "value": "relevance",
+    "label": "Best match",
+    "selected": false,
+    "default": true
+  },
+  {
+    "value": "rating",
+    "label": "Rating",
+    "selected": false,
+    "default": false
+  },
+  {
+    "value": "price-asc",
+    "label": "Lowest Price",
+    "selected": true,
+    "default": false
+  },
+  {
+    "value": "price-desc",
+    "label": "Highest Price",
+    "selected": false,
+    "default": false
+  }
+]

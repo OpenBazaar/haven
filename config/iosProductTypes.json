@@ -1,0 +1,28 @@
+[
+  {
+    "value": "any",
+    "label": "Any",
+    "checked": true,
+    "default": true,
+    "exclusive": true
+  },
+  {
+    "value": "physical_good",
+    "label": "Physical Good",
+    "checked": false,
+    "default": false
+  },
+  {
+    "value": "digital_good",
+    "label": "Digital Good",
+    "disabled": true,
+    "checked": false,
+    "default": false
+  },
+  {
+    "value": "service",
+    "label": "Service",
+    "checked": false,
+    "default": false
+  }
+]

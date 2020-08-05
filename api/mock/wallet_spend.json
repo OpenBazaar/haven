@@ -1,0 +1,36 @@
+{
+  "amount": {
+      "amount": "13065",
+      "currency": {
+          "code": "LTC",
+          "currencyType": "crypto",
+          "divisibility": 8,
+          "name": "Litecoin",
+          "testnetCode": "TLTC"
+      }
+  },
+  "confirmedBalance": {
+      "amount": "521956",
+      "currency": {
+          "code": "LTC",
+          "currencyType": "crypto",
+          "divisibility": 8,
+          "name": "Litecoin",
+          "testnetCode": "TLTC"
+      }
+  },
+  "memo": "Test spend",
+  "orderId": "",
+  "timestamp": "2019-08-30T16:51:49-04:00",
+  "txid": "b6ed7af5e7d102270a4282dcc3b7851a0cfd7a81f04a5b988feef986a128481e",
+  "unconfirmedBalance": {
+      "amount": "0",
+      "currency": {
+          "code": "LTC",
+          "currencyType": "crypto",
+          "divisibility": 8,
+          "name": "Litecoin",
+          "testnetCode": "TLTC"
+      }
+  }
+}

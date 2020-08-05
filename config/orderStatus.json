@@ -1,0 +1,155 @@
+{
+  "Awaiting payment": {
+    "items": [{
+      "value": "AWAITING_PAYMENT",
+      "label": "Awaiting Payment",
+      "actions": {
+        "sales": []
+      }
+    }],
+    "orderType": ["purchases", "sales"],
+    "description": "Awaiting payment from the buyer"
+  },
+  "Pending": {
+    "items": [{
+      "value": "PENDING",
+      "label": "Pending",
+      "actions": {
+        "sales": ["Decline", "Accept"],
+        "purchases": ["Cancel", "Dispute"]
+      }
+    }],
+    "orderType": ["purchases", "sales"],
+    "description": "Waiting to be accepted"
+  },
+  "Awaiting fulfillment": {
+    "items": [{
+      "value": "AWAITING_FULFILLMENT",
+      "label": "Awaiting Fulfillment",
+      "actions": {
+        "purchases": ["Dispute"]
+      }
+    }],
+    "orderType": ["purchases"],
+    "description": "Waiting to be fulfilled"
+  },
+  "Ready to process": {
+    "items": [{
+      "value": "AWAITING_FULFILLMENT",
+      "label": "Ready to process",
+      "actions": {
+        "sales": ["Refund", "Fulfill"]
+      }
+    }],
+    "orderType": ["sales"],
+    "description": "Waiting to be fulfilled"
+  },
+  "Fulfilled": {
+    "items": [{
+      "value": "FULFILLED",
+      "label": "Fulfilled",
+      "actions": {
+        "sales": ["Dispute"],
+        "purchases": ["Dispute", "Complete"]
+      }
+    }],
+    "orderType": ["purchases", "sales"],
+    "description": "Item shipped, file sent, in transit, etc"
+  },
+  "In dispute": {
+    "items": [
+      {
+        "value": "DISPUTED",
+        "label": "In dispute",
+        "actions": {
+          "sales": [],
+          "purchases": []
+        }
+      },
+      {
+        "value": "DECIDED",
+        "label": "Dispute payout",
+        "actions": {
+          "sales": ["Accept payout"],
+          "purchases": ["Accept payout"]
+        }
+      },
+      {
+        "value": "DISPUTE_EXPIRED",
+        "label": "Dispute expired",
+        "actions": {
+          "sales": ["Claim"],
+          "purchases": []
+        }
+      }
+    ],
+    "orderType": ["purchases", "sales"],
+    "description": "Order in dispute with a moderator"
+  },
+  "Closed": {
+    "items": [
+      {
+        "value": "COMPLETED",
+        "label": "Completed",
+        "actions": {
+          "sales": [],
+          "purchases": []
+        }
+      },
+      {
+        "value": "CANCELED",
+        "label": "Canceled",
+        "actions": {
+          "sales": [],
+          "purchases": []
+        }
+      },
+      {
+        "value": "DECLINED",
+        "label": "Canceled",
+        "actions": {
+          "sales": [],
+          "purchases": []
+        }
+      },
+      {
+        "value": "REFUNDED",
+        "label": "Refunded",
+        "actions": {
+          "sales": [],
+          "purchases": []
+        }
+      },
+      {
+        "value": "RESOLVED",
+        "label": "Dispute closed",
+        "actions": {
+          "sales": [],
+          "purchases": ["Write a review"]
+        }
+      },
+      {
+        "value": "PAYMENT_FINALIZED",
+        "label": "Payment claimed",
+        "actions": {
+          "sales": [],
+          "purchases": ["Write a review"]
+        }
+      }
+    ],
+    "orderType": ["purchases", "sales"],
+    "description": "Goods sent, funds released, feedback left"
+  },
+  "Error": {
+    "items": [{
+      "value": "PROCESSING_ERROR",
+      "label": "Error",
+      "actions": {
+        "sales": ["Dispute"],
+        "purchases": ["Cancel", "Dispute"]
+      }
+    }],
+    "orderType": ["purchases", "sales"],
+    "description": "Oops! Something went wrong"
+  }
+}

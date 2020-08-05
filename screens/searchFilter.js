@@ -1,0 +1,235 @@
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import { ScrollView, View, Animated, Text, Platform } from 'react-native';
+import { set } from 'lodash';
+
+import { updateFilter } from '../reducers/search';
+
+import RadioFilter from '../components/molecules/RadioFilter';
+import RadioModalFilter from '../components/molecules/RadioModalFilter';
+import Header from '../components/molecules/Header';
+import NavBackButton from '../components/atoms/NavBackButton';
+import LinkText from '../components/atoms/LinkText';
+import SwitchInput from '../components/atoms/SwitchInput';
+import ResetFilter from '../components/atoms/ResetFilter';
+import Section from '../components/molecules/Section';
+
+import { screenWrapper } from '../utils/styles';
+import { ratingOptions } from '../utils/ratings';
+
+import { ACCEPTED_COINS } from '../utils/coins';
+import prodTypes from '../config/productTypes.json';
+import countries from '../config/countries.json';
+import sortOptions from '../config/sort.json';
+import productConditionOptions from '../config/conditionFilter.json';
+
+import { eventTracker } from '../utils/EventTracker';
+
+const shippingCountries = [...countries];
+
+const showingProdTypes = Platform.OS === 'ios' ? prodTypes.filter(item => item.value !== 'digital_good') : prodTypes;
+
+const optionStyle = {
+  paddingHorizontal: 14,
+};
+
+const toastStyle = {
+  container: {
+    position: 'absolute',
+    bottom: 80,
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  wrapper: {
+    width: 'auto',
+    backgroundColor: 'rgba(34, 34, 34, 0.9)',
+    borderRadius: 30,
+    height: 40,
+    paddingHorizontal: 25,
+    paddingVertical: 6,
+    justifyContent: 'center',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 15,
+    lineHeight: 18,
+    fontWeight: 'normal',
+    textAlign: 'center',
+  },
+};
+
+class SearchFilter extends PureComponent {
+  constructor(props) {
+    super(props);
+    const { filter } = props;
+    this.state = { ...filter, showFilterToast: false };
+  }
+
+  componentWillMount() {
+    const { filter } = this.props;
+    this.setState({ ...filter });
+  }
+
+  onLeft = () => {
+    this.props.navigation.goBack();
+  }
+
+  onRight = () => {
+    const {
+      shipping, rating, type, sortBy, nsfw, conditions, acceptedCurrencies,
+    } = this.state;
+    eventTracker.trackEvent('Discover-FilteredSearch', {
+      shipping,
+      rating,
+      type,
+      sortBy,
+      nsfw,
+      conditions,
+      acceptedCurrencies,
+    });
+    this.props.updateFilter({
+      shipping,
+      rating,
+      type,
+      sortBy,
+      nsfw,
+      conditions,
+      acceptedCurrencies,
+    });
+    this.props.navigation.goBack();
+  }
+
+  onChange = field => (val) => {
+    const updateObject = {};
+    set(updateObject, field, val);
+    this.setState(updateObject);
+  }
+
+  aniVal = new Animated.Value(0);
+
+  resetFilters = () => {
+    this.setState({
+      shipping: 'any',
+      rating: 0,
+      type: 'any',
+      sortBy: 'relevance',
+      nsfw: false,
+      conditions: 'any',
+      acceptedCurrencies: 'any',
+      showFilterToast: true,
+    }, () => {
+      Animated.timing(this.aniVal, {
+        toValue: 1,
+        duration: 1000,
+      }).start(() => {
+        Animated.timing(this.aniVal, {
+          toValue: 0,
+          duration: 1000,
+          delay: 2000,
+        }).start(() => {
+          this.setState({
+            showFilterToast: false,
+          });
+        });
+      });
+    });
+  }
+
+  render() {
+    const {
+      shipping, rating, nsfw, acceptedCurrencies, sortBy, type, conditions,
+      showFilterToast,
+    } = this.state;
+    return (
+      <View style={screenWrapper.wrapper}>
+        <Header
+          left={<NavBackButton />}
+          onLeft={this.onLeft}
+          title="Filter"
+          right={<LinkText text="Done" />}
+          onRight={this.onRight}
+          noBorder
+        />
+        <ScrollView>
+          <RadioFilter
+            title="Sort by"
+            selected={sortBy}
+            options={sortOptions}
+            onChange={this.onChange('sortBy')}
+            hasBorder
+          />
+          <RadioModalFilter
+            title="Accepts"
+            selected={acceptedCurrencies}
+            options={ACCEPTED_COINS}
+            onChange={this.onChange('acceptedCurrencies')}
+            hasBorder
+          />
+          <RadioModalFilter
+            title="Ships to"
+            options={shippingCountries}
+            selected={shipping}
+            onChange={this.onChange('shipping')}
+            hasBorder
+          />
+          <RadioFilter
+            title="Rating"
+            selected={rating}
+            options={ratingOptions}
+            onChange={this.onChange('rating')}
+            hasBorder
+          />
+          <RadioFilter
+            title="Listing type"
+            selected={type}
+            options={showingProdTypes}
+            onChange={this.onChange('type')}
+            hasBorder
+          />
+          {type === 'physical_good' && (
+            <RadioFilter
+              title="Item Condition"
+              selected={conditions}
+              options={productConditionOptions}
+              onChange={this.onChange('conditions')}
+              hasBorder
+            />
+          )}
+          <Section title="Adult content" bodyStyle={optionStyle}>
+            <SwitchInput
+              secondary
+              noBorder
+              useNative
+              title="Show adult content (18+)"
+              value={nsfw}
+              onChange={this.onChange('nsfw')}
+            />
+          </Section>
+        </ScrollView>
+        { showFilterToast && (
+          <Animated.View
+            style={[
+              toastStyle.container,
+              {
+                opacity: this.aniVal,
+              },
+            ]}
+          >
+            <View style={toastStyle.wrapper}>
+              <Text style={toastStyle.text}>
+                Filters reset
+              </Text>
+            </View>
+          </Animated.View>
+        )}
+        <ResetFilter onPress={this.resetFilters} />
+      </View>
+    );
+  }
+}
+
+const mapStateToProps = state => ({ filter: state.search.filter });
+
+const mapDispatchToProps = { updateFilter };
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchFilter);

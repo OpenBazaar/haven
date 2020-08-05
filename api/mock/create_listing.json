@@ -1,0 +1,260 @@
+{
+  "slug": "",
+  "metadata": {
+      "contractType": "PHYSICAL_GOOD",
+      "format": "FIXED_PRICE",
+      "expiry": "2037-12-31T05:00:00.000Z",
+      "acceptedCurrencies": [
+          "TBTC",
+          "TBCH",
+          "TLTC",
+          "TZEC",
+          "TETH"
+      ]
+  },
+  "item": {
+      "title": "ETH physical order testing w/ options",
+      "description": "This is a listing example for testing orders.",
+      "processingTime": "3 days",
+      "priceCurrency": {
+          "code": "USD",
+          "divisibility": 2
+      },
+      "bigAmount": "100",
+      "tags": [
+          "vintage dress"
+      ],
+      "images": [
+          {
+              "filename": "front",
+              "tiny": "QmbjyAxYee4y3443kAMLcmRVwggZsRDKiyXnXus1qdJJWz",
+              "small": "QmVsoT9iabv6GZhxhvtjSpQMJA6QyMivGTs6MmHJr6TBm9",
+              "medium": "QmTJfeeapZwFM8EoZAuf16JsSJyxZtKaAR6hmWiMf4CTcF",
+              "large": "QmfTKL3Z67mWKTKf9XKSCj1ptmDRaZLr5yjPS4JrVDgo5h",
+              "original": "QmNexx7SaJCVCjyGGG3j2k7fenn3iVhtWdm9RvKvT7GTLq"
+          },
+          {
+              "filename": "cream",
+              "tiny": "QmU1cBgjyHpuzDYbEd4iDVuPzxgKM3CqhRhDJqkHWCKBXq",
+              "small": "QmP3BVFuga7N4XEX8iU2MFYC7pc6mfTRQRrpZbKiVy2Csr",
+              "medium": "QmQaSzaoHzp8raZLtPEFyCjTnwfXvDGKdXFM83STDVWG43",
+              "large": "QmNsFdsX2LNALG2WBxw6E6FTPZWgJcRAcLHnKdWczrCNf9",
+              "original": "QmTEUnCjuQPj1ggj5UL5vJujkgBiNYY4jkteugnogiCJny"
+          },
+          {
+              "filename": "black",
+              "tiny": "QmdA3Nmc8VnwSvt98Deo2RQztEiCsAkNLhron73bnBzARe",
+              "small": "QmcADxUo89ZsEAWiYsuUk7hrgjWDMKXL1CtoA9sTNrQFFP",
+              "medium": "QmZydpAJoLsJWbP5vmh59W6bW1kuiCV34yD62hq28AtP7b",
+              "large": "QmXixGseetihe6vZiWcTw9N1pieok1YtRoxwvyd5d7jz6s",
+              "original": "QmZsZ78FJwt281gfeUvGzDnsBW7WNjPWW3aJWDKskhpCRr"
+          },
+          {
+              "filename": "other_red",
+              "tiny": "QmbRFtxNWqACak1vvMJrrxUjzWjTJbMqi3vdUK5ZYvibgt",
+              "small": "QmRdYph9YrfpdzMsaDnuySj6U4AY9dZhmjd8Cv2e6SscUG",
+              "medium": "QmcD4pkp7SwCmN95pFnED2hz1LfsoYTPpynxeZbxCMoYPL",
+              "large": "QmbSQZNAL3pZspUYWm6WNBD1oEQ6i9EnWPEsnk1DfdKnAv",
+              "original": "QmZpgjK4jXmdqPg8Jt9YHGVmiuowVve3sbN2AZx7GXioDF"
+          }
+      ],
+      "categories": [
+          "👚 Apparel & Accessories"
+      ],
+      "condition": "New",
+      "options": [
+          {
+              "name": "Color",
+              "description": "Color of the dress.",
+              "variants": [
+                  {
+                      "name": "Red",
+                      "image": {
+                          "filename": "front",
+                          "tiny": "QmbjyAxYee4y3443kAMLcmRVwggZsRDKiyXnXus1qdJJWz",
+                          "small": "QmVsoT9iabv6GZhxhvtjSpQMJA6QyMivGTs6MmHJr6TBm9",
+                          "medium": "QmTJfeeapZwFM8EoZAuf16JsSJyxZtKaAR6hmWiMf4CTcF",
+                          "large": "QmfTKL3Z67mWKTKf9XKSCj1ptmDRaZLr5yjPS4JrVDgo5h",
+                          "original": "QmNexx7SaJCVCjyGGG3j2k7fenn3iVhtWdm9RvKvT7GTLq"
+                      }
+                  },
+                  {
+                      "name": "Cream",
+                      "image": {
+                          "filename": "cream",
+                          "tiny": "QmU1cBgjyHpuzDYbEd4iDVuPzxgKM3CqhRhDJqkHWCKBXq",
+                          "small": "QmP3BVFuga7N4XEX8iU2MFYC7pc6mfTRQRrpZbKiVy2Csr",
+                          "medium": "QmQaSzaoHzp8raZLtPEFyCjTnwfXvDGKdXFM83STDVWG43",
+                          "large": "QmNsFdsX2LNALG2WBxw6E6FTPZWgJcRAcLHnKdWczrCNf9",
+                          "original": "QmTEUnCjuQPj1ggj5UL5vJujkgBiNYY4jkteugnogiCJny"
+                      }
+                  },
+                  {
+                      "name": "Black",
+                      "image": {
+                          "filename": "black",
+                          "tiny": "QmdA3Nmc8VnwSvt98Deo2RQztEiCsAkNLhron73bnBzARe",
+                          "small": "QmcADxUo89ZsEAWiYsuUk7hrgjWDMKXL1CtoA9sTNrQFFP",
+                          "medium": "QmZydpAJoLsJWbP5vmh59W6bW1kuiCV34yD62hq28AtP7b",
+                          "large": "QmXixGseetihe6vZiWcTw9N1pieok1YtRoxwvyd5d7jz6s",
+                          "original": "QmZsZ78FJwt281gfeUvGzDnsBW7WNjPWW3aJWDKskhpCRr"
+                      }
+                  }
+              ]
+          },
+          {
+              "name": "Sizes",
+              "description": "Size of the dress.",
+              "variants": [
+                  {
+                      "name": "Small"
+                  },
+                  {
+                      "name": "Medium"
+                  },
+                  {
+                      "name": "Large"
+                  },
+                  {
+                      "name": "Extra Large"
+                  }
+              ]
+          }
+      ],
+      "skus": [
+          {
+              "variantCombo": [
+                  0,
+                  0
+              ],
+              "productID": "dress-red-small",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  0,
+                  1
+              ],
+              "productID": "dress-red-medium",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  0,
+                  2
+              ],
+              "productID": "dress-red-large",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  0,
+                  3
+              ],
+              "productID": "dress-red-xlarge",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  1,
+                  0
+              ],
+              "productID": "dress-cream-small",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  1,
+                  1
+              ],
+              "productID": "dress-cream-medium",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  1,
+                  2
+              ],
+              "productID": "dress-cream-large",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  1,
+                  3
+              ],
+              "productID": "dress-cream-xlarge",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  2,
+                  0
+              ],
+              "productID": "dress-black-small",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  2,
+                  1
+              ],
+              "productID": "dress-black-medium",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  2,
+                  2
+              ],
+              "productID": "dress-black-large",
+              "bigSurcharge": "100"
+          },
+          {
+              "variantCombo": [
+                  2,
+                  3
+              ],
+              "productID": "dress-black-xlarge",
+              "bigSurcharge": "100"
+          }
+      ],
+      "nsfw": false
+  },
+  "shippingOptions": [
+      {
+          "name": "Worldwide",
+          "type": "FIXED_PRICE",
+          "regions": [
+              "ALL"
+          ],
+          "services": [
+              {
+                  "name": "Standard",
+                  "bigPrice": "0",
+                  "estimatedDelivery": "3 days",
+                  "bigAdditionalItemPrice": "0"
+              },
+              {
+                  "name": "Express",
+                  "bigPrice": "100",
+                  "estimatedDelivery": "3 days",
+                  "bigAdditionalItemPrice": "100"
+              }
+          ]
+      }
+  ],
+  "taxes": [],
+  "coupons": [
+      {
+          "title": "DASCOUPON",
+          "discountCode": "LETMEIN",
+          "bigPriceDiscount": "10"
+      }
+  ],
+  "moderators": [
+      "QmcdkKM2fWCKzTZdpjEY6abzRbDhRRJvNmqwNKVyiDtGky"
+  ],
+  "termsAndConditions": "These are my terms and conditions.",
+  "refundPolicy": "This is my refund policy."
+}

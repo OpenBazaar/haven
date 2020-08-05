@@ -1,0 +1,14 @@
+[
+  {
+      "value": "true",
+      "label": "Visible",
+      "checked": false,
+      "default": false
+  },
+  {
+      "value": "false",
+      "label": "Hidden",
+      "checked": true,
+      "default": true
+  }
+]

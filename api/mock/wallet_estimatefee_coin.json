@@ -1,0 +1,12 @@
+{
+  "estimatedFee": {
+      "amount": "53000000000000",
+      "currency": {
+          "code": "ETH",
+          "currencyType": "crypto",
+          "divisibility": 18,
+          "name": "Ethereum",
+          "testnetCode": ""
+      }
+  }
+}

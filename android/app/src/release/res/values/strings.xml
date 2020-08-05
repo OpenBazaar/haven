@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Haven</string>
+    <bool name="branch_testmode">false</bool>
+</resources>

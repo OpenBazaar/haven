@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  NativeBazaar
+//
+//  Copyright © 2020 Facebook. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include? "env.prod.xcconfig"
+#include "Pods/Target Support Files/Pods-NativeBazaar Prod/Pods-NativeBazaar Prod.debug.xcconfig"

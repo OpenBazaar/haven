@@ -1,0 +1,45 @@
+import React from 'react';
+import { TouchableWithoutFeedback, Text, View, ActivityIndicator } from 'react-native';
+
+import { brandColor, foregroundColor } from '../commonColors';
+
+const styles = {
+  wrapper: {
+    backgroundColor: brandColor,
+    margin: 15,
+    padding: 12,
+    justifyContent: 'center',
+    borderRadius: 2,
+  },
+  text: {
+    color: foregroundColor,
+    fontSize: 16,
+    lineHeight: 22,
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    letterSpacing: 0,
+    textAlign: 'center',
+  },
+  disabled: {
+    opacity: 0.3,
+  },
+};
+
+export default ({
+  title, onPress, wrapperStyle, textStyle, disabled, loading,
+}) => (
+  <TouchableWithoutFeedback
+    onPress={onPress}
+    disabled={disabled || loading}
+  >
+    <View style={[styles.wrapper, wrapperStyle, disabled && styles.disabled]}>
+      {loading ? (
+        <ActivityIndicator size="small" color="white" />
+      ) : (
+        <Text style={[styles.text, textStyle]}>
+          {title}
+        </Text>
+      )}
+    </View>
+  </TouchableWithoutFeedback>
+);
