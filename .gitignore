@@ -68,3 +68,7 @@ android/app/src/main/assets/appcenter-config.json
 ios/GoogleService-Info.plist
 .env
 .env.prod
+havenBuildConfigFiles/appcenter-config.json
+havenBuildConfigFiles/AppCenter-Config.plist
+havenBuildConfigFiles/google-services.json
+havenBuildConfigFiles/GoogleService-Info.plist
