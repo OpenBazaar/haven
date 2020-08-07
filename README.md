@@ -1,20 +1,55 @@
 
-## OB1 Native-Bazaar
-[![Build Status](https://app.bitrise.io/app/9c4f0ff60d38782d/status.svg?token=PdrfhQM1NCRlGC-HFRRwMw&branch=develop)](https://www.bitrise.io/app/9c4f0ff60d38782d) [![CodeFactor](https://www.codefactor.io/repository/github/ob1company/native-bazaar/badge)](https://www.codefactor.io/repository/github/ob1company/native-bazaar)
+## Haven
+[![Build Status](https://app.bitrise.io/app/9c4f0ff60d38782d/status.svg?token=PdrfhQM1NCRlGC-HFRRwMw&branch=develop)](https://www.bitrise.io/app/9c4f0ff60d38782d)
 
-![banner](https://avatars1.githubusercontent.com/u/14205218?s=60&v=4)
+Haven is a mobile app that runs the decentralised marketplace, [OpenBazaar](https://openbazaar.org). It is composed of two major parts:
 
-OB1 mobile app built with react-native.
+1. The react-native _client_ (i.e. this repository)
+2. The Golang OpenBazaar server, which is compiled into a library/framework for iOS and Android devices using gomobile
+
+The app enables users to access a global decentralised marketplace for goods and services, where they can use a variety of supported cryptocurrencies (BTC, BCH, LTC, ZEC, ETH) for payments. Haven also directly access supporting third party services to improve the user experience:
+
+- OB1 search
+- A social feed powered by https://getstream.io (and supporting middleware built by OB1 for authenticated access)
+- Deeplinking support provided by Branch.io
+- Opt-in metrics via Countly
+- Wyre plugin for topping-up the wallet with cryptocurrency 
 
 ### Setup Instructions:
 
-1. `git clone https://github.com/OB1Company/native-bazaar.git`
-2. `yarn`
-3. `yarn start`
+1. Clone the repo
+  - https://github.com/OpenBazaar/haven
+2. Install npm and pod dependencies
 
-### Development Server
+```
+cd haven
+yarn
+cd ios && pod install
+```
 
-The app is currently connected to a development server `http://45.32.240.156:4002` (username:password). When the app is further developed, we'll switch to the mobile server running on the device.
+3. Copy `.env` file to the root directory
+  - If you want to run the prod target, the env file name should be `.env.prod`. The env file should look like this:
+
+```
+BRANCH_KEY=
+COUNTLY_ROOT_URL=
+COUNTLY_APP_KEY=
+STREAM_API_KEY=
+STREAM_APP_ID=
+HMAC_SECRET=
+```
+
+4. Copy those files into `havenBuildConfigFiles` folder:
+
+```
+AppCenter-Config.plist
+GoogleService-Info.plist
+appcenter-config.json
+google-services.json
+```
+
+5. In `havenBuildConfigs` folder, run `copy_files.sh`
+6. Run the app: `react-native run-ios`
 
 #### iOS
 Then you'll need to set up iOS simulator (Xcode). The app can also be installed on your device, but the default is not a static build, meaning it will need to be connected to Xcode to function. Static build instructions can be found [here](http://facebook.github.io/react-native/docs/running-on-device.html).
@@ -51,9 +86,33 @@ List of devices attached
 4. `./gradlew installRelease`
 5. Find the application installed on your device.
 
+### Contribution recommendations
 
-### Main libraries used:
-redux, redux-saga, react-native-navigation, typescript.
+Further development of Haven will be primarily sourced from community contributions. Below are some recommended entry points for contributors:
+
+- More consistent 'basic' modularisation (e.g. add all the repetitive colors to `commonColors.js`
+- Component modularisation to make code DRY
+- Improve the folder structure, the module structure, and naming to have them make more sense (e.g. components are sometimes not put correctly to the sub-section of the Atomic Design)
+- Upgrade modules to be up-to-date (e.g, `react-navigation` should be upgraded from 3 to 5)
+- Will need to gradually transition to Functional Component leveraging React Hook
+- Renaming price conversion functions (e.g. `minUnitAmountToBCH`) to something more generic
+
+#### Unit testing
+
+Some high priority targets for developing unit tests:
+
+- Checkout flow, specifically the price calculation
+- All the components that include prices
+- The Order details screen for various order statuses 
+
+#### End-to-end testing
+
+Integration of an end-to-end testing tool such as Appium should be considered and applied to:
+
+- The checkout flow
+- The order flow for the various order statuses
+- The send money flow
+- The deep linking flow (just to make sure the various kinds of deep links open correct screens)
 
 ### Troubleshooting
 
@@ -79,3 +138,16 @@ While resolving module `react-native-vector-icons/Ionicons`, the Haste package `
 ```
 
 Type into the terminal: `rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json`
+
+### Contributors
+
+We'd like to thank all of the contributors to the app throughout this journey, with a special mention to:
+
+- Development
+  - https://github.com/danZheng1993
+  - https://github.com/heyradcode
+  - https://github.com/reactular
+  - https://github.com/hoffmabc 
+- Design
+  - https://github.com/morebrownies
+  - https://github.com/miboediono
